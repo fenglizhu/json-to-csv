@@ -4,7 +4,7 @@
     <js-module name="jsontocsv" src="www/jsontocsv.js">
         <clobbers target="cordova.plugins.jsontocsv" />
     </js-module>
-    <platfrom>
+    <platfrom name="android">
 
         <!-- 对象文件互相转换插件 -->
         <config-file parent="/*" target="res/xml/config.xml">
