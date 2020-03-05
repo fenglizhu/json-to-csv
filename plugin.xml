@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="com.personal.jsontocsv" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>jsontocsv</name>
+    <js-module name="jsontocsv" src="www/jsontocsv.js">
+        <clobbers target="cordova.plugins.jsontocsv" />
+    </js-module>
+    <platfrom>
+
+        <!-- 对象文件互相转换插件 -->
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="jsontocsv">
+                <param name="android-package" value="com.personal.jsontocsv.JsonToCsv"></param>
+            </feature>
+        </config-file>
+        
+        <!-- 项目文件 -->
+        <source-file src="src/android/JsonToCsv.java" target-dir="src/com/personal/jsontocsv"></source-file>
+
+    </platfrom>
+</plugin>

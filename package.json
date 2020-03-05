@@ -1,0 +1,23 @@
+{
+  "name": "jsontocsv",
+  "version": "1.0.0",
+  "description": "A Object file conversion plugin about android.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fenglizhu/jsontocsv.git"
+  },
+  "keywords": [
+    "cordova",
+    "jsontocsv"
+  ],
+  "author": "zhufengli",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fenglizhu/jsontocsv/issues"
+  },
+  "homepage": "https://github.com/fenglizhu/jsontocsv#readme"
+}
