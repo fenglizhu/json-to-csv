@@ -4,7 +4,7 @@
     <js-module name="jsontocsv" src="www/jsontocsv.js">
         <clobbers target="cordova.plugins.jsontocsv" />
     </js-module>
-    <platfrom name="android">
+    <platform name="android">
 
         <!-- 对象文件互相转换插件 -->
         <config-file parent="/*" target="res/xml/config.xml">
@@ -12,9 +12,21 @@
                 <param name="android-package" value="com.personal.jsontocsv.JsonToCsv"></param>
             </feature>
         </config-file>
+
+        <!-- 项目权限 -->
+        <config-file target="app/src/main/AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+            <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"></uses-permission>
+        </config-file>
         
         <!-- 项目文件 -->
         <source-file src="src/android/JsonToCsv.java" target-dir="src/com/personal/jsontocsv"></source-file>
+        <source-file src="src/android/CsvUtil.java" target-dir="src/com/personal/jsontocsv"></source-file>
 
-    </platfrom>
+        <!-- 项目jar包 -->
+        <source-file src="src/android/commons-csv-1.1.jar" target-dir="app/libs"></source-file>
+        <source-file src="src/android/commons-io-2.4.jar" target-dir="app/libs"></source-file>
+        <source-file src="src/android/json-org.jar" target-dir="app/libs"></source-file>
+
+    </platform>
 </plugin>
